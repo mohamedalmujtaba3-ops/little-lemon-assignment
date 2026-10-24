@@ -1,0 +1,262 @@
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  padding: 0.5rem 1rem;
+  background: var(--yellow);
+  color: var(--dark);
+  font-weight: 700;
+  z-index: 10;
+}
+
+.skip-link:focus {
+  top: 0.5rem;
+}
+
+.site-header {
+  background: var(--white);
+  border-bottom: 1px solid var(--light);
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+}
+
+.brand {
+  font-family: "Markazi Text", Georgia, serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--green);
+  text-decoration: none;
+}
+
+.main-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+.main-nav a {
+  display: inline-block;
+  padding: 0.5rem 0;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  border-bottom-color: var(--yellow);
+}
+
+.hero {
+  background: var(--green);
+  color: var(--white);
+}
+
+.hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+.hero-inner h1 {
+  color: var(--yellow);
+  margin-bottom: 0;
+}
+
+.hero-subtitle {
+  font-family: "Markazi Text", Georgia, serif;
+  font-size: 2rem;
+  margin: 0 0 1rem;
+}
+
+.hero-inner p:not(.hero-subtitle) {
+  max-width: 34rem;
+  font-size: 1.15rem;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: 0;
+  border-radius: 16px;
+  background: var(--yellow);
+  color: var(--dark);
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover:not(:disabled) {
+  background: var(--orange);
+}
+
+.button:disabled {
+  background: var(--light);
+  color: #6b6b6b;
+  cursor: not-allowed;
+}
+
+.section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem;
+}
+
+.section-inner.narrow {
+  max-width: 640px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  height: 100%;
+  background: var(--light);
+  border-radius: 16px;
+  padding: 1.25rem;
+}
+
+.card header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.price {
+  margin: 0;
+  font-weight: 700;
+  color: #a4471f;
+}
+
+.page {
+  background: var(--white);
+}
+
+.booking-form {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.field label {
+  font-weight: 700;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border: 2px solid var(--green);
+  border-radius: 8px;
+  font: inherit;
+  background: var(--white);
+}
+
+.field input[aria-invalid="true"],
+.field select[aria-invalid="true"] {
+  border-color: var(--danger);
+}
+
+.field-hint {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555555;
+}
+
+.field-error,
+.form-error {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--danger);
+}
+
+.summary {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1.5rem 0 0;
+  padding: 1.25rem;
+  background: var(--light);
+  border-radius: 16px;
+}
+
+.summary div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.summary dt {
+  font-weight: 700;
+}
+
+.summary dd {
+  margin: 0;
+}
+
+.site-footer {
+  background: var(--green);
+  color: var(--white);
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.site-footer h2 {
+  font-size: 1.5rem;
+  color: var(--yellow);
+}
+
+.site-footer address {
+  font-style: normal;
+}
+
+.site-footer p {
+  margin: 0 0 0.25rem;
+}
+
+.site-footer li {
+  margin-bottom: 0.25rem;
+}
+
+@media (max-width: 600px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-inner {
+    padding: 2rem 1rem;
+  }
+
+  .button {
+    width: 100%;
+    text-align: center;
+  }
+}
